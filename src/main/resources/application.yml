@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: classmates-service
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          # Указываем Tenant ID из Azure AD
+          issuer-uri: https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0
+
+logging:
+  level:
+    kz.narxoz.classmates.client.UniversityApiClient: DEBUG
